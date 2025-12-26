@@ -9,11 +9,10 @@ public class Snake {
     ArrayList<ElementField> body = new ArrayList<ElementField>();
     Direction direction;
 
-    Snake(){
-        head = new ElementField(new Point(5, 5), '@');
+    Snake(int x, int y){
+        head = new ElementField(new Point(x, y), '@');
         direction = Direction.STOP;
     }
-
 
 
 }
