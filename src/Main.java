@@ -1,12 +1,4 @@
-void main() throws Exception {
-//    Cursor.clearConsole();
-//    Cursor.setCursorPosition(1, 1);
-//    Cursor.print("hui");
-//    Cursor.moveCursor(10, -1);
-//    Cursor.print('0');
-
-
-
+public static void main(String[] args) throws IOException, InterruptedException {
+    GameController game = GameController.getInstance();
+    game.start();
 }
-
-

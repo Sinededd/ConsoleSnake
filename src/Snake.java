@@ -1,10 +1,13 @@
+import KeyControl.InputListener;
+import KeyControl.KeyAction;
+
 import java.util.ArrayList;
 
 enum Direction {
     STOP, UP, DOWN, LEFT, RIGHT
 }
 
-public class Snake {
+public class Snake implements InputListener {
     ElementField head;
     ArrayList<ElementField> body = new ArrayList<ElementField>();
     Direction direction;
@@ -15,4 +18,15 @@ public class Snake {
     }
 
 
+    @Override
+    public void onKeyPressed(KeyAction keyAction) {
+        switch (keyAction)
+        {
+            case NONE -> System.out.println("Нихуя");
+            case DOWN -> System.out.println("Вниз");
+            case UP -> System.out.println("Вверх");
+            case LEFT -> System.out.println("Влево");
+            case RIGHT -> System.out.println("Вправо");
+        }
+    }
 }
